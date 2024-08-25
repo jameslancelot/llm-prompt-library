@@ -1,0 +1,104 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+/* Styles for Utterances comments */
+.utterances {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.utterances-frame {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.utterances-frame .timeline-comment {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.utterances-frame .form-control,
+.utterances-frame .form-control:focus {
+  background-color: #fff;
+  border-color: #d1d5da;
+  box-shadow: none;
+}
+
+.utterances-frame .btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.utterances-frame .btn:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.utterances-frame .markdown-body {
+  color: #24292e;
+}
+
+.utterances-frame .markdown-body a {
+  color: #0366d6;
+}
+
+.utterances-frame .markdown-body blockquote {
+  border-left-color: #dfe2e5;
+}
+
+.utterances-frame .markdown-body hr {
+  background-color: #e1e4e8;
+}

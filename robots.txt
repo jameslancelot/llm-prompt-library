@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://llm-prompt-library.replit.app/sitemap.xml

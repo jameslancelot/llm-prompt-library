@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Prompt Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>LLM Prompt Library</h1>
+  </header>
+
+  <main>
+    <section id="prompt-templates">
+      <h2>Top 5 Prompt Engineering Templates</h2>
+
+      <article>
+        <h3>1. 🎯 Task-Specific Instruction</h3>
+        <pre><code id="template1">System: You are an AI assistant specialized in summarizing scientific articles. Your summaries should be concise, accurate, and highlight the key findings and implications of the research.
+
+User: Summarize the following abstract in 3 bullet points, focusing on the main research question, methodology, and key findings:
+
+"Climate change poses a significant threat to global biodiversity. This study investigates the impact of rising temperatures on alpine plant species in the European Alps. Using data collected over a 20-year period from 200 mountain peaks, we employed a combination of field observations and statistical modeling to analyze changes in plant distribution and abundance. Our results show that 62% of alpine plant species have moved upslope at an average rate of 2.7 meters per decade. Furthermore, we observed a 17% decrease in species richness at lower elevations and a 31% increase at higher elevations. These findings suggest that climate change is causing a significant reorganization of alpine plant communities, with potential long-term consequences for ecosystem functioning and biodiversity conservation in mountain regions."</code></pre>
+        <button onclick="copyToClipboard('template1')">Copy to Clipboard</button>
+      </article>
+
+      <article>
+        <h3>2. 🔁 Few-Shot Learning</h3>
+        <pre><code id="template2">System: You are an AI language model trained to classify customer support queries into appropriate categories. Use the provided examples to guide your classification of new queries.
+
+User: Please classify the following customer support queries into the appropriate category (Billing, Technical, Account, or Product):
+
+Examples:
+1. Query: "I can't log into my account. It says my password is incorrect."
+   Category: Account
+
+2. Query: "My latest invoice shows a charge I don't recognize."
+   Category: Billing
+
+3. Query: "How do I connect your software to my CRM system?"
+   Category: Technical
+
+4. Query: "What's the difference between your basic and premium plans?"
+   Category: Product
+
+Now classify this new query:
+"I've been charged twice for my monthly subscription. Can you help?"</code></pre>
+        <button onclick="copyToClipboard('template2')">Copy to Clipboard</button>
+      </article>
+
+      <article>
+        <h3>3. 🧠 Chain-of-Thought</h3>
+        <pre><code id="template3">System: You are an AI assistant designed to solve complex problems by breaking them down into steps. Provide detailed explanations for each step of your reasoning process.
+
+User: Solve the following problem, showing your step-by-step reasoning:
+
+A bakery sells chocolate chip cookies in boxes of 6 for $3.50 per box. They also offer a bulk discount: when you buy 5 boxes, you get a 6th box free. If a school wants to buy enough cookies so that each of its 168 students can have 2 cookies, how much will it cost the school, assuming they take advantage of the bulk discount offer?</code></pre>
+        <button onclick="copyToClipboard('template3')">Copy to Clipboard</button>
+      </article>
+
+      <article>
+        <h3>4. 🎭 Role-Playing</h3>
+        <pre><code id="template4">System: You are a seasoned marriage counselor with 25 years of experience. Your approach is empathetic, balanced, and solution-oriented. You aim to help couples improve their communication and understanding of each other's perspectives.
+
+User: As the marriage counselor, how would you respond to this situation:
+
+A couple comes to you with the following issue: "We've been married for 10 years, and lately, we've been arguing constantly about household chores. My husband feels I'm too demanding and critical of his efforts, while I feel he's not pulling his weight and I have to nag to get anything done. It's creating a lot of tension in our relationship. How can we resolve this?"</code></pre>
+        <button onclick="copyToClipboard('template4')">Copy to Clipboard</button>
+      </article>
+
+      <article>
+        <h3>5. 🔍 Comparative Analysis</h3>
+        <pre><code id="template5">System: You are an AI assistant specialized in providing objective, well-researched comparisons. Your analyses should be balanced, considering multiple perspectives and backed by factual information.
+
+User: Compare and contrast traditional in-person education with online education. Consider the following aspects:
+1. Learning effectiveness
+2. Flexibility and convenience
+3. Social interaction and networking
+4. Cost
+5. Access to resources
+
+Present your analysis in a table format, followed by a brief paragraph summarizing the key differences and potential situations where each might be preferable.</code></pre>
+        <button onclick="copyToClipboard('template5')">Copy to Clipboard</button>
+      </article>
+    </section>
+
+    <section id="comments">
+      <h2>Comments</h2>
+      <script src="https://utteranc.es/client.js" repo="jameslancelot/llm-prompt-library" issue-term="pathname"
+        theme="github-light" crossorigin="anonymous" async>
+        </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 LLM Prompt Library. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function copyToClipboard(elementId) {
+      const el = document.getElementById(elementId);
+      const text = el.textContent;
+      navigator.clipboard.writeText(text).then(function () {
+        console.log('Copying to clipboard was successful!');
+      }, function (err) {
+        console.error('Could not copy text: ', err);
+      });
+    }
+  </script>
+</body>
+
+</html>
