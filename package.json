@@ -1,0 +1,25 @@
+{
+  "name": "llm-prompt-library",
+  "version": "1.0.0",
+  "description": "LLM Prompt Library",
+  "main": "script.js",
+  "scripts": {
+    "watch:ts": "node --no-inspect ./node_modules/.bin/tsc -w",
+    "watch:css": "node --no-inspect ./node_modules/.bin/tailwindcss -i ./globals.css -o ./output.css --watch",
+    "serve": "node --no-inspect ./node_modules/.bin/live-server --port=8000",
+    "build:css": "node --no-inspect ./node_modules/.bin/tailwindcss -i ./globals.css -o ./output.css",
+    "start": "npm run build:css && node --no-inspect ./node_modules/.bin/npm-run-all --parallel watch:ts watch:css serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^4.5.4"
+  }
+}

@@ -102,31 +102,3 @@ article {
 .utterances-frame .markdown-body hr {
   background-color: #e1e4e8;
 }
-
-.bg-primary {
-  background-color: #3b82f6;
-}
-
-.text-primary {
-  color: #3b82f6;
-}
-
-.hover\:bg-primary-dark:hover {
-  background-color: #2563eb;
-}
-
-.hover\:text-primary-dark:hover {
-  color: #2563eb;
-}
-
-@media (max-width: 768px) {
-  .md\:hidden {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .md\:w-\[300px\] {
-    width: 300px;
-  }
-}

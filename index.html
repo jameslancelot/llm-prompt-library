@@ -1,115 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="text-sm">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM Prompt Library</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Prompt Library: Top 5 Prompt Engineering Templates</title>
+    <meta name="description" content="Explore the top 5 prompt engineering templates for LLMs. Improve your AI interactions with task-specific instructions, few-shot learning, chain-of-thought reasoning, role-playing, and comparative analysis.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-markdown.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-okaidia.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        code {
+            font-size: 0.75rem;
+            line-height: 1.2;
+            word-break: break-word;
+        }
+        .language-markdown {
+            white-space: pre-wrap !important;
+            word-wrap: break-word !important;
+            overflow-x: hidden !important;
+        }
+    </style>
 </head>
+<body class="bg-gray-100 text-gray-900 text-xs sm:text-sm">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 z-40 w-full border-b bg-white bg-opacity-95 backdrop-blur">
+            <div class="container mx-auto flex h-12 items-center">
+                <div class="mr-4 hidden md:flex">
+                    <a class="mr-6 flex items-center space-x-2" href="/">
+                        <span class="hidden font-bold text-sm sm:inline-block">LLM Prompt Library</span>
+                    </a>
+                    <nav class="flex items-center space-x-4 text-xs font-medium">
+                        <a class="text-gray-600 hover:text-gray-900" href="#top-5-templates">Templates</a>
+                        <a class="text-gray-600 hover:text-gray-900" href="#comments">Comments</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-<body>
-  <header>
-    <h1>LLM Prompt Library</h1>
-  </header>
+        <div class="container mx-auto flex-1">
+            <div class="flex flex-col md:flex-row">
+                <!-- Navigation Sidebar -->
+                <aside class="w-full md:w-48 p-2">
+                    <nav class="space-y-1">
+                        <a href="#top-5-templates" class="text-gray-600 hover:text-gray-900">Top 5 Prompt Templates</a>
+                        <a href="#task-specific" class="text-gray-600 hover:text-gray-900">Task-Specific Instruction</a>
+                        <a href="#few-shot" class="text-gray-600 hover:text-gray-900">Few-Shot Learning</a>
+                        <a href="#chain-of-thought" class="text-gray-600 hover:text-gray-900">Chain-of-Thought</a>
+                        <a href="#role-playing" class="text-gray-600 hover:text-gray-900">Role-Playing</a>
+                        <a href="#comparative-analysis" class="text-gray-600 hover:text-gray-900">Comparative Analysis</a>
+                    </nav>
+                </aside>
 
-  <main>
-    <section id="prompt-templates">
-      <h2>Top 5 Prompt Engineering Templates</h2>
+                <!-- Main Content -->
+                <main class="flex-1 p-2 md:p-4">
+                    <section id="top-5-templates" class="mb-8">
+                        <h1 class="text-2xl font-extrabold tracking-tight lg:text-3xl mb-2">Top 5 Prompt Engineering Templates</h1>
+                        <p class="text-sm text-gray-600 mb-4">Discover the most effective prompt engineering techniques to enhance your interactions with AI language models.</p>
 
-      <article>
-        <h3>1. 🎯 Task-Specific Instruction</h3>
-        <pre><code id="template1">System: You are an AI assistant specialized in summarizing scientific articles. Your summaries should be concise, accurate, and highlight the key findings and implications of the research.
+                        <!-- Template articles go here -->
+                        <article id="task-specific" class="mb-4 bg-white rounded-lg border shadow-sm">
+                            <div class="p-3">
+                                <h2 class="border-b pb-1 text-xl font-semibold mb-2">1. Task-Specific Instruction</h2>
+                                <div class="bg-gray-100 rounded-lg p-3">
+                                    <div class="relative">
+                                        <pre><code id="template1" class="language-markdown">
+System: You are an AI assistant specialized in summarizing scientific articles. Your summaries should be concise, accurate, and highlight the key findings and implications of the research.
 
 User: Summarize the following abstract in 3 bullet points, focusing on the main research question, methodology, and key findings:
 
-"Climate change poses a significant threat to global biodiversity. This study investigates the impact of rising temperatures on alpine plant species in the European Alps. Using data collected over a 20-year period from 200 mountain peaks, we employed a combination of field observations and statistical modeling to analyze changes in plant distribution and abundance. Our results show that 62% of alpine plant species have moved upslope at an average rate of 2.7 meters per decade. Furthermore, we observed a 17% decrease in species richness at lower elevations and a 31% increase at higher elevations. These findings suggest that climate change is causing a significant reorganization of alpine plant communities, with potential long-term consequences for ecosystem functioning and biodiversity conservation in mountain regions."</code></pre>
-        <button onclick="copyToClipboard('template1')">Copy to Clipboard</button>
-      </article>
+"Climate change poses a significant threat to global biodiversity. This study investigates the impact of rising temperatures on alpine plant species in the European Alps. Using data collected over a 20-year period from 200 mountain peaks, we employed a combination of field observations and statistical modeling to analyze changes in plant distribution and abundance. Our results show that 62% of alpine plant species have moved upslope at an average rate of 2.7 meters per decade. Furthermore, we observed a 17% decrease in species richness at lower elevations and a 31% increase at higher elevations. These findings suggest that climate change is causing a significant reorganization of alpine plant communities, with potential long-term consequences for ecosystem functioning and biodiversity conservation in mountain regions."
+                                        </code></pre>
+                                        <button onclick="copyToClipboard('template1')" class="absolute top-2 right-2 bg-green-500 text-white hover:bg-green-600 rounded-md text-xs font-medium px-3 py-1">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-      <article>
-        <h3>2. 🔁 Few-Shot Learning</h3>
-        <pre><code id="template2">System: You are an AI language model trained to classify customer support queries into appropriate categories. Use the provided examples to guide your classification of new queries.
+                        <article id="few-shot" class="mb-4 bg-white rounded-lg border shadow-sm">
+                            <div class="p-3">
+                                <h2 class="border-b pb-1 text-xl font-semibold mb-2">2. Few-Shot Learning</h2>
+                                <div class="bg-gray-100 rounded-lg p-3">
+                                    <div class="relative">
+                                        <pre><code id="template2" class="language-markdown">
+User: I want you to classify the sentiment of movie reviews. Here are a few examples:
 
-User: Please classify the following customer support queries into the appropriate category (Billing, Technical, Account, or Product):
+Review: "This movie was absolutely fantastic! The acting was superb and the plot kept me on the edge of my seat."
+Sentiment: Positive
 
-Examples:
-1. Query: "I can't log into my account. It says my password is incorrect."
-   Category: Account
+Review: "I was really disappointed with this film. The characters were flat and the story was predictable."
+Sentiment: Negative
 
-2. Query: "My latest invoice shows a charge I don't recognize."
-   Category: Billing
+Review: "It was an okay movie. Nothing special, but not terrible either."
+Sentiment: Neutral
 
-3. Query: "How do I connect your software to my CRM system?"
-   Category: Technical
+Now, classify the sentiment of this review:
+"I can't believe how amazing this movie was! The special effects were mind-blowing and the performances were Oscar-worthy. Definitely a must-see!"
+                                        </code></pre>
+                                        <button onclick="copyToClipboard('template2')" class="absolute top-2 right-2 bg-green-500 text-white hover:bg-green-600 rounded-md text-xs font-medium px-3 py-1">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-4. Query: "What's the difference between your basic and premium plans?"
-   Category: Product
+                        <article id="chain-of-thought" class="mb-4 bg-white rounded-lg border shadow-sm">
+                            <div class="p-3">
+                                <h2 class="border-b pb-1 text-xl font-semibold mb-2">3. Chain-of-Thought Reasoning</h2>
+                                <div class="bg-gray-100 rounded-lg p-3">
+                                    <div class="relative">
+                                        <pre><code id="template3" class="language-markdown">
+System: You are an AI assistant capable of breaking down complex problems into step-by-step solutions. Please provide detailed reasoning for each step.
 
-Now classify this new query:
-"I've been charged twice for my monthly subscription. Can you help?"</code></pre>
-        <button onclick="copyToClipboard('template2')">Copy to Clipboard</button>
-      </article>
+User: Solve the following word problem, showing your work and explaining each step:
 
-      <article>
-        <h3>3. 🧠 Chain-of-Thought</h3>
-        <pre><code id="template3">System: You are an AI assistant designed to solve complex problems by breaking them down into steps. Provide detailed explanations for each step of your reasoning process.
+"A bakery sells cookies in boxes of 12. If they have 156 cookies and want to distribute them equally among 6 charity events, how many full boxes can they give to each event, and how many cookies will be left over?"
+                                        </code></pre>
+                                        <button onclick="copyToClipboard('template3')" class="absolute top-2 right-2 bg-green-500 text-white hover:bg-green-600 rounded-md text-xs font-medium px-3 py-1">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-User: Solve the following problem, showing your step-by-step reasoning:
+                        <article id="role-playing" class="mb-4 bg-white rounded-lg border shadow-sm">
+                            <div class="p-3">
+                                <h2 class="border-b pb-1 text-xl font-semibold mb-2">4. Role-Playing</h2>
+                                <div class="bg-gray-100 rounded-lg p-3">
+                                    <div class="relative">
+                                        <pre><code id="template4" class="language-markdown">
+System: You are a seasoned journalist working for a respected news organization. Your task is to conduct an interview on a complex topic, asking probing questions and following up on the interviewee's responses.
 
-A bakery sells chocolate chip cookies in boxes of 6 for $3.50 per box. They also offer a bulk discount: when you buy 5 boxes, you get a 6th box free. If a school wants to buy enough cookies so that each of its 168 students can have 2 cookies, how much will it cost the school, assuming they take advantage of the bulk discount offer?</code></pre>
-        <button onclick="copyToClipboard('template3')">Copy to Clipboard</button>
-      </article>
+User: I want you to role-play as a journalist interviewing a climate scientist about the potential impact of rising sea levels on coastal cities. Begin the interview with an introduction and your first question.
+                                        </code></pre>
+                                        <button onclick="copyToClipboard('template4')" class="absolute top-2 right-2 bg-green-500 text-white hover:bg-green-600 rounded-md text-xs font-medium px-3 py-1">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-      <article>
-        <h3>4. 🎭 Role-Playing</h3>
-        <pre><code id="template4">System: You are a seasoned marriage counselor with 25 years of experience. Your approach is empathetic, balanced, and solution-oriented. You aim to help couples improve their communication and understanding of each other's perspectives.
+                        <article id="comparative-analysis" class="mb-4 bg-white rounded-lg border shadow-sm">
+                            <div class="p-3">
+                                <h2 class="border-b pb-1 text-xl font-semibold mb-2">5. Comparative Analysis</h2>
+                                <div class="bg-gray-100 rounded-lg p-3">
+                                    <div class="relative">
+                                        <pre><code id="template5" class="language-markdown">
+System: You are an AI assistant capable of comparing and contrasting different concepts, products, or ideas. Please provide a detailed comparison of the following:
 
-User: As the marriage counselor, how would you respond to this situation:
+User: Compare and contrast the benefits and drawbacks of using a relational database management system (RDBMS) versus a NoSQL database for a large-scale e-commerce application.
+                                        </code></pre>
+                                        <button onclick="copyToClipboard('template5')" class="absolute top-2 right-2 bg-green-500 text-white hover:bg-green-600 rounded-md text-xs font-medium px-3 py-1">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-A couple comes to you with the following issue: "We've been married for 10 years, and lately, we've been arguing constantly about household chores. My husband feels I'm too demanding and critical of his efforts, while I feel he's not pulling his weight and I have to nag to get anything done. It's creating a lot of tension in our relationship. How can we resolve this?"</code></pre>
-        <button onclick="copyToClipboard('template4')">Copy to Clipboard</button>
-      </article>
+                    </section>
 
-      <article>
-        <h3>5. 🔍 Comparative Analysis</h3>
-        <pre><code id="template5">System: You are an AI assistant specialized in providing objective, well-researched comparisons. Your analyses should be balanced, considering multiple perspectives and backed by factual information.
+                    <section id="comments" class="mt-8 max-w-2xl mx-auto">
+                        <h2 class="border-b pb-1 text-xl font-semibold mb-2">Comments</h2>
+                        <div class="utterances">
+                            <script src="https://utteranc.es/client.js"
+                                    repo="jameslancelot/llm-prompt-library"
+                                    issue-term="pathname"
+                                    theme="github-light"
+                                    crossorigin="anonymous"
+                                    async>
+                            </script>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
 
-User: Compare and contrast traditional in-person education with online education. Consider the following aspects:
-1. Learning effectiveness
-2. Flexibility and convenience
-3. Social interaction and networking
-4. Cost
-5. Access to resources
-
-Present your analysis in a table format, followed by a brief paragraph summarizing the key differences and potential situations where each might be preferable.</code></pre>
-        <button onclick="copyToClipboard('template5')">Copy to Clipboard</button>
-      </article>
-    </section>
-
-    <section id="comments">
-      <h2>Comments</h2>
-      <script src="https://utteranc.es/client.js" repo="jameslancelot/llm-prompt-library" issue-term="pathname"
-        theme="github-light" crossorigin="anonymous" async>
-        </script>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 LLM Prompt Library. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function copyToClipboard(elementId) {
-      const el = document.getElementById(elementId);
-      const text = el.textContent;
-      navigator.clipboard.writeText(text).then(function () {
-        console.log('Copying to clipboard was successful!');
-      }, function (err) {
-        console.error('Could not copy text: ', err);
-      });
-    }
-  </script>
+        <footer class="border-t py-3 md:py-0">
+            <div class="container mx-auto flex flex-col items-center justify-between gap-2 md:h-16 md:flex-row">
+                <p class="text-center text-xs leading-loose text-gray-600 md:text-left">
+                    © 2024 LLM Prompt Library. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
 </body>
-
 </html>
